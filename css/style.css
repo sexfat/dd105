@@ -1,5 +1,12 @@
 body {
  color: #f20;
+ background-color: rgb(171, 171, 171);
 
+}
+
+h1 {
+
+ background-color: rgb(101, 101, 101);
+ height: 300px;
 
 }
