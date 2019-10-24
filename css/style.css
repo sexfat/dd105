@@ -1,12 +1,27 @@
 body {
- color: #f20;
- background-color: rgb(171, 171, 171);
+    color: #f20;
+    background-color: rgb(171, 171, 171);
 
 }
 
 h1 {
+    background-color: rgb(101, 101, 101);
+    height: 300px;
+}
 
- background-color: rgb(101, 101, 101);
- height: 300px;
+#logo {
+    background-color: #fff;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.nav {
+    display: inline-block;
+
+
+
+
 
 }
