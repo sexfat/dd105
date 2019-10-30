@@ -126,17 +126,17 @@
         </fieldset>
 
     </form>
-    <form action="" method="GET">
+    <form action="" method="POST">
 
         <fieldset>
             <legend>會員註冊</legend>
             <p>
                 <label for="account">*姓名</label>
-                <input type="text" name="name" required>
+                <input type="text" name="name" placeholder="填入你的姓名" required>
             </p>
             <p>
                 <label for="">*信箱</label>
-                <input type="email" name="email" id="" required>
+                <input type="email" name="email" placeholder="填入你的信箱" id="" required>
             </p>
             <p>
 
@@ -157,6 +157,26 @@
                 <label for="">籃球</label>
                 <input type="checkbox" name="cl" id="" value="cl">
                 <label for="">爬山</label>
+            </p>
+            <p>
+                <label for="location">出生地</label>
+                <select name="" id="" size="3" multiple> 
+                    <option value="Taipei">台北市</option>
+                    <option value="" >桃園市</option>
+                    <option value="">新竹市</option>
+                    <option value="">苗栗市</option>
+                    <option value="" selected>台中市</option>
+                </select>
+            </p>
+            <p>
+                <textarea name="" id="" cols="30" rows="10">寫下你的評論....
+                </textarea>
+
+            </p>
+            <p>
+                <input type="file" name="" id="">
+                <input type="tel" name="tel" id="">
+                <input type="date" name="" id="">
             </p>
 
             <input type="submit" value="送出">
