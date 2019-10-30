@@ -10,11 +10,26 @@ body {
 } */
 
 #logo {
+
+    width: 150px;
+
+}
+
+
+.wrapper {
+
+    width: 1000px;
+    margin: 0 auto;
+
+}
+img {
+
+    width: 100%;
+}
+
+#logo>div {
     /* background-color: #fff; */
-    width: 200px;
-    height: 40px;
     font-size: 30px;
-    text-align: center;
     text-indent: -100000px;
     /* display: none; */
 }
@@ -25,19 +40,30 @@ body {
 
 .lineheight {
 
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
 
 }
 
 hr {
-width: 500px;
+    width: 500px;
 }
 
 .subtext {
- margin-left: 20px;
- margin-right: 20px;
-
-
+    margin-left: 20px;
+    margin-right: 20px;
 }
+
+img {
+    width: 400px;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+     }
+  th, td {
+     padding: 0 15px;
+     text-align: center;
+    }   
