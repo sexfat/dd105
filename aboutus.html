@@ -16,70 +16,165 @@
             src="https://public-assets.envato-static.com/assets/logos/envato_market-a5ace93f8482e885ae008eb481b9451d379599dfed24868e52b6b2d66f5cf633.svg"
             alt="logo"></a>
     <table>
-        <tr>
-            <td>001</td>
-            <td>002</td>
-            <td>003</td>
-        </tr>
-        <tr>
-            <td>004</td>
-            <td>005</td>
-            <td>006</td>
-        </tr>
-        <tr>
-            <td>007</td>
-            <td>008</td>
-            <td>009</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>001</th>
+                <th>002</th>
+                <th>003</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#">連結</a></td>
+                <td>005</td>
+                <td>006</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>007</td>
+                <td>008</td>
+                <td>009</td>
+            </tr>
+        </tfoot>
 
     </table>
-
     <h2>四行六列</h2>
-    <table>
+    <table class="a1">
         <tr>
-            <td>001</td>
-            <td>002</td>
+            <td colspan="4">001</td>
+            <!-- <td>002</td>
             <td>003</td>
-            <td>004</td>
+            <td>004</td> -->
         </tr>
         <tr>
             <td>005</td>
             <td>006</td>
-            <td>007</td>
-            <td>008</td>
+            <td colspan="2">007</td>
+            <!-- <td>008</td> -->
         </tr>
         <tr>
             <td>009</td>
             <td>010</td>
-            <td>011</td>
+            <td rowspan="2">011</td>
             <td>012</td>
         </tr>
         <tr>
             <td>013</td>
             <td>014</td>
-            <td>015</td>
+            <!-- <td>015</td> -->
             <td>016</td>
         </tr>
         <tr>
-            <td>017</td>
-            <td>018</td>
+            <td colspan="2" rowspan="2">017</td>
+            <!-- <td>018</td> -->
             <td>019</td>
             <td>020</td>
         </tr>
         <tr>
-            <td>021</td>
-            <td>022</td>
+            <!-- <td >021</td> -->
+            <!-- <td>022</td> -->
             <td>023</td>
             <td>024</td>
         </tr>
     </table>
 
-    
+
+    <table>
+        <tr>
+            <td rowspan="2">名稱</td>
+            <td colspan="2">日期</td>
+            <td rowspan="2">小記</td>
+        </tr>
+        <tr>
+            <td>重量</td>
+            <td>單價</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>22</td>
+            <td>22</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>22</td>
+            <td>22</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td colspan="3">總價</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h3>會員登入</h3>
+    <form action="" method="GET">
+
+        <fieldset>
+            <legend>會員登入</legend>
+            <p>
+                <label for="account">帳號：</label>
+                <input type="text">
+            </p>
+            <p>
+                <label for="psw">密碼:</label>
+                <input type="password" name="" id="">
+            </p>
+            <input type="submit" value="送出">
+            <input type="reset">
+        </fieldset>
+
+    </form>
+    <form action="" method="GET">
+
+        <fieldset>
+            <legend>會員註冊</legend>
+            <p>
+                <label for="account">*姓名</label>
+                <input type="text" name="name" required>
+            </p>
+            <p>
+                <label for="">*信箱</label>
+                <input type="email" name="email" id="" required>
+            </p>
+            <p>
+
+                <input type="radio" name="gender" id="" value="male">
+                <label for="">男</label>
+                <input type="radio" name="gender" id="" value="female">
+                <label for="">女</label>
+                <input type="radio" name="gender" id="" value="other">
+                <label for="">其他</label>
+            </p>
+            <p>
+                <h2>你喜歡的運動</h2>
+
+
+                <input type="checkbox" name="sw" id="" value="sw">
+                <label for="">游泳</label>
+                <input type="checkbox" name="bas" id="" value="bas">
+                <label for="">籃球</label>
+                <input type="checkbox" name="cl" id="" value="cl">
+                <label for="">爬山</label>
+            </p>
+
+            <input type="submit" value="送出">
+            <input type="reset" value="重置">
+
+        </fieldset>
+
+
+
+    </form>
 
 
 
 
 
+
+
+    <div style=" height: 500px;"></div>
 
 
 </body>
