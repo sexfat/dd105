@@ -4,17 +4,19 @@ body {
 
 }
 
-h1 {
+/* h1 {
     background-color: rgb(101, 101, 101);
     height: 300px;
-}
+} */
 
 #logo {
-    background-color: #fff;
+    /* background-color: #fff; */
     width: 200px;
     height: 40px;
     font-size: 30px;
     text-align: center;
+    text-indent: -100000px;
+    /* display: none; */
 }
 
 .nav {
@@ -31,4 +33,11 @@ h1 {
 
 hr {
 width: 500px;
+}
+
+.subtext {
+ margin-left: 20px;
+ margin-right: 20px;
+
+
 }
