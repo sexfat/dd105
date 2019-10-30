@@ -1,6 +1,6 @@
 body {
     color: #f20;
-    background-color: rgb(171, 171, 171);
+    background-color: rgb(225, 225, 225);
 
 }
 
@@ -21,8 +21,16 @@ h1 {
     display: inline-block;
 }
 
-p {
+.lineheight {
 
-    margin: 0;
-    padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 500px;
+
 }
+
+hr {
+width: 500px;
+
+}
+
