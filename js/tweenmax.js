@@ -30,7 +30,7 @@ TweenMax.fromTo('.box2', 3, {
 
 
 
- function animation() {
+function animation() {
     TweenMax.staggerTo('.box3', 1, {
         x: 50,
         opacity: 1,
@@ -39,3 +39,15 @@ TweenMax.fromTo('.box2', 3, {
 }
 
 
+var tl = new TimelineMax({
+    repeat: 1,
+    yoyo: true
+});
+
+tl.to('.box4', 1, {
+    x: 100
+}).to('.box4', 1, {
+    y: 100
+}).to('.box4', 1, {
+    x: 200
+});
