@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,MAAM,CAAE;EACL,gBAAgB,EDKL,OAAc;ECJzB,MAAM,EAAE,KAAK;CACf;;ACHD,AAAA,MAAM,CAAC;EACJ,gBAAgB,EFML,OAAgB;CEL7B",
+    "sources": [
+        "../sass/aboutus.scss",
+        "../sass/base/_var.scss",
+        "../sass/layout/_header.scss",
+        "../sass/layout/_footer.scss"
+    ],
+    "names": [],
+    "file": "aboutus.css"
+}
