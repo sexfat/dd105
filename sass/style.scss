@@ -3,6 +3,27 @@
 @import 'layout/footer';
 
 
+
+//mixin
+/*mixin*/
+
+@mixin margin() {
+    margin: 20px;
+}
+
+@mixin rect($width , $height , $bgc) {
+    width: $width ;
+    height: $height ;
+    background-color: $bgc;
+}
+
+
+@mixin float_Module($dir , $width:null){
+    float: $dir;
+    width: $width;
+}
+
+
 body {
     padding: 0;
     font-family: $fontFamily;
@@ -16,12 +37,17 @@ body {
             padding: 0;
             margin: 0;
             font-size: $fontSize * 3;
+
             span {
-                color: rgb(85, 252, 1)
+                color: rgb(85, 252, 1);
+                @include margin();
             }
-           
+
         }
-        
+        .rect {
+            @include float_Module(right ,400px);
+            background-color: rgb(255, 0, 123);
+        }
+
     }
 }
-

@@ -7,6 +7,7 @@ footer {
   background-color: #c800ff;
 }
 
+/*mixin*/
 body {
   padding: 0;
   font-family: "Noto Sans TC", sans-serif;
@@ -24,5 +25,12 @@ body .wrapper h1 {
 
 body .wrapper h1 span {
   color: #55fc01;
+  margin: 20px;
+}
+
+body .wrapper .rect {
+  float: right;
+  width: 400px;
+  background-color: #ff007b;
 }
 /*# sourceMappingURL=style.css.map */
