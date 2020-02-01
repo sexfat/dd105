@@ -8,7 +8,7 @@
 @mixin btn($width, $padding, $color, $bgc, $border:null, $border-r:null) {
     width: $width;
     padding: $padding;
-    text-align: center;
+    @include textAlign(center);
     color: $color;
     background-color: $bgc;
     cursor: pointer;

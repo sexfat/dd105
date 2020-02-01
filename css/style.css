@@ -45,6 +45,7 @@ body .wrapper .content .rect {
   border: 0px;
   border-radius: 10px;
   margin: 10px 0;
+  text-align: left;
 }
 
 .btn_wide:hover {
@@ -122,5 +123,26 @@ body .wrapper .content .rect {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   background-image: url("./images/box_image.jpg");
+}
+
+.box-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.textbox_left {
+  width: 100px;
+  min-height: 30px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.box-plus {
+  width: 30px;
+  height: -10px;
+  margin: 200px;
+  font: 1px;
+  font-size: 1px;
+  padding: 0px;
 }
 /*# sourceMappingURL=style.css.map */

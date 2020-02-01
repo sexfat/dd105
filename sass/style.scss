@@ -1,10 +1,14 @@
 @import 'base/var';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'mixins/textAlign';
 @import 'mixins/btn';
 @import 'mixins/animation';
 @import 'mixins/rect';
 @import 'mixins/float';
+
+
+
 
 
 
@@ -41,21 +45,26 @@ body {
                 @include float_Module(right, 400px);
                 background-color: rgb(255, 0, 123);
             }
-
         }
 
     }
 }
 
 
+@mixin textAlign($value) {
+    text-align: $value;
+}
 
 
-
-
+@mixin box-center($align) {
+    margin: 0 auto;
+    @include textAlign($align);
+}
 
 .btn_wide {
     @include btn(200px, 8px, #fff, rgb(0, 238, 255), 0px, 10px);
     margin: 10px 0;
+    @include textAlign(left);
 }
 
 
@@ -133,4 +142,29 @@ body {
 .boxs {
     @include prefix(transition, all .5s);
     @include bg_image(box_image);
+}
+
+
+.box-center {
+    @include box-center(center);
+}
+
+
+.textbox_left {
+    width: 100px;
+    min-height: 30px;
+    @include box-center(left);
+}
+
+
+$num : 10;
+$num-1 : 20;
+
+.box-plus {
+    width: $num + $num-1 + px;
+    height : $num - $num-1 + px ;
+    margin:  $num * $num-1 + px ;
+    font: round($num / $num-1 ) + px; //四捨五入
+    font-size: ceil($num / $num-1 ) + px; // 無條件進位
+    padding: floor($num / $num-1 ) + px; // 無條件捨去
 }
