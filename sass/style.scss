@@ -88,26 +88,49 @@ body {
 
 
 
-@mixin btn_class($class, $width) {
-    .#{$class} {
+@mixin btn_class($classname, $width) {
+    ##{$classname} {
         width: $width;
         padding: 10px;
         text-align: center;
         background-color: #333;
-        color: #fff
+        color: #fff;
     }
+}
+
+
+@mixin btn_box($width) {
+    width: $width;
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
 }
 
 @mixin bg_image($url_files) {
     background-image: url('./images/#{$url_files}.jpg');
 }
+
 .bgimages {
     @include bg_image(pic_02);
 }
 
 
+@include btn_class(btn_midde, 200px);
+
+.btn-noclass {
+    @include btn_box(110px);
+}
 
 
+@mixin prefix($attr, $value) {
+    -moz-#{$attr}: $value;
+    -o-#{$attr}: $value;
+    -webkit-#{$attr}: $value;
+    #{$attr}: $value;
+}
 
-
-@include btn_class(btnclass, 110px);
+.boxs {
+    @include prefix(transition, all .5s);
+    @include bg_image(box_image);
+}

@@ -102,11 +102,25 @@ body .wrapper .content .rect {
   background-image: url("./images/pic_02.jpg");
 }
 
-.btnclass {
+#btn_midde {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-noclass {
   width: 110px;
   padding: 10px;
   text-align: center;
   background-color: #333;
   color: #fff;
+}
+
+.boxs {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: url("./images/box_image.jpg");
 }
 /*# sourceMappingURL=style.css.map */
