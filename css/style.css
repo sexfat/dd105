@@ -28,9 +28,56 @@ body .wrapper h1 span {
   margin: 20px;
 }
 
-body .wrapper .rect {
+body .wrapper .content .rect {
   float: right;
   width: 400px;
   background-color: #ff007b;
+}
+
+.btn_wide {
+  width: 200px;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+  background-color: #00eeff;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.btn_wide:hover {
+  background-color: #00becc;
+}
+
+.btn_small {
+  width: 100px;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+  background-color: #0040ff;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 10px;
+}
+
+.btn_small:hover {
+  background-color: #0033cc;
+}
+
+.btn_medium {
+  width: 150px;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+  background-color: #0040ff;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.btn_medium:hover {
+  background-color: #0033cc;
 }
 /*# sourceMappingURL=style.css.map */

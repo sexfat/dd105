@@ -1,0 +1,14 @@
+@mixin animation_module($value) {
+    -webkit-animation: $value;
+    /* Safari 4+ */
+    -moz-animation: $value;
+    /* Fx 5+ */
+    -o-animation: $value;
+    /* Opera 12+ */
+    animation: $value;
+}
+
+
+// .bgimage {
+//   @include animation_module()
+// }

@@ -1,0 +1,23 @@
+//========   按鈕模組 =======
+//.btn_wide {
+//   @include btn( 200px, 8px, #fff, rgb(0, 238, 255), 0px, 10px);
+// }
+//=========   end   ========
+
+
+@mixin btn($width, $padding, $color, $bgc, $border:null, $border-r:null) {
+    width: $width;
+    padding: $padding;
+    text-align: center;
+    color: $color;
+    background-color: $bgc;
+    cursor: pointer;
+    border: $border;
+    border-radius: $border-r;
+    &:hover{
+       background-color: darken($bgc ,10);
+    }
+}
+
+// .btn_wide:hover{
+// }

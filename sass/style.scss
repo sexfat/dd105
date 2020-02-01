@@ -1,6 +1,10 @@
 @import 'base/var';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'mixins/btn';
+@import 'mixins/animation';
+@import 'mixins/rect';
+@import 'mixins/float';
 
 
 
@@ -10,19 +14,6 @@
 @mixin margin() {
     margin: 20px;
 }
-
-@mixin rect($width , $height , $bgc) {
-    width: $width ;
-    height: $height ;
-    background-color: $bgc;
-}
-
-
-@mixin float_Module($dir , $width:null){
-    float: $dir;
-    width: $width;
-}
-
 
 body {
     padding: 0;
@@ -44,10 +35,36 @@ body {
             }
 
         }
-        .rect {
-            @include float_Module(right ,400px);
-            background-color: rgb(255, 0, 123);
+
+        .content {
+            .rect {
+                @include float_Module(right, 400px);
+                background-color: rgb(255, 0, 123);
+            }
+
         }
 
     }
+}
+
+
+
+
+
+
+
+.btn_wide {
+    @include btn(200px, 8px, #fff, rgb(0, 238, 255), 0px, 10px);
+    margin: 10px 0;
+}
+
+
+
+.btn_small {
+    @include btn(100px, 8px, #fff, rgb(0, 64, 255), 0px, 10px);
+}
+
+.btn_medium {
+    @include btn(150px, 8px, #fff, rgb(0, 64, 255), 0px, 10px);
+    margin: 10px 0;
 }
