@@ -621,4 +621,44 @@ body {
 .col-md-12 {
   width: 100%;
 }
+
+.img_a1 {
+  background-image: url("images/a1.png");
+}
+
+.img_a2 {
+  background-image: url("images/a2.png");
+}
+
+.img_a3 {
+  background-image: url("images/a3.png");
+}
+
+.img_a4 {
+  background-image: url("images/a4.png");
+}
+
+.img_box {
+  background-image: url("images/box.png");
+}
+
+.img_b1 {
+  background-image: url("images/b1.jpg");
+}
+
+.img_b2 {
+  background-image: url("images/b2.jpg");
+}
+
+.img_b3 {
+  background-image: url("images/b3.jpg");
+}
+
+.img_b4 {
+  background-image: url("images/b4.jpg");
+}
+
+.img_jpgbox {
+  background-image: url("images/jpgbox.jpg");
+}
 /*# sourceMappingURL=style.css.map */

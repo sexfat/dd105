@@ -238,3 +238,25 @@ $num-1 : 20;
 
 
 @include grid(12);
+
+
+@mixin img_bg($file , $list) {
+    @if $file==jpg {
+        @each $var in $list {
+            .img_#{$var} {
+                background-image: url('images/#{$var}.jpg');
+            }
+        }
+    }
+    @else if $file==png {
+        @each $var in $list {
+            .img_#{$var} {
+                background-image: url('images/#{$var}.png');
+            }
+        }
+    }
+}
+
+
+@include img_bg(png , a1 a2 a3 a4 box);
+@include img_bg(jpg , b1 b2 b3 b4 jpgbox);
