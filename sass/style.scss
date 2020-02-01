@@ -193,28 +193,48 @@ $num-1 : 20;
             @content
         }
     }
+
     @else if $theme==yellow {
         body {
             background-color: yellow;
-             @content
+            @content
         }
     }
+
     @else if $theme==blue {
         body {
             background-color: blue;
             @content
         }
     }
+
     @else {
         body {
             background-color: #fff;
             @content
         }
     }
-};
+}
 
-@include theme(yellow){
-  color: #fff; 
+;
+
+@include theme(yellow) {
+    color: #fff;
+}
+
+@for $i from 1 through 100 {
+    .for-#{$i} {
+        font-size: $i * 1px;
+    }
+}
+
+@mixin grid($num) {
+    @for $i from 1 through $num {
+        .col-md-#{$i} {
+            width: ($i / $num) * 100%;
+        }
+    }
 }
 
 
+@include grid(12);
