@@ -41,7 +41,6 @@ body h5 {
 body .wrapper h1 {
   padding: 0;
   margin: 0;
-  font-size: 54px;
 }
 
 body .wrapper h1 span {
@@ -164,5 +163,14 @@ body .wrapper .content .rect {
   font: 1px;
   font-size: 1px;
   padding: 0px;
+}
+
+.box-area {
+  margin-top: 20px;
+}
+
+body {
+  background-color: yellow;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

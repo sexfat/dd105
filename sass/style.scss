@@ -6,31 +6,7 @@
 @import 'mixins/animation';
 @import 'mixins/rect';
 @import 'mixins/float';
-
-
-@mixin titleSize($fontSize) {
-    h1 {
-        font-size: ceil($fontSize * 4.8);
-    }
-    h2 {
-        font-size: floor($fontSize * 3.2);
-    }
-    h3 {
-        font-size: round($fontSize * 2.8);
-    }
-    h4 {
-        font-size: ceil($fontSize * 2.1);
-    }
-    h5 {
-        font-size: ceil($fontSize * 1.2);
-    }
-
-}
-
-
-
-
-
+@import 'mixins/titleSize';
 
 
 
@@ -54,7 +30,6 @@ body {
         h1 {
             padding: 0;
             margin: 0;
-            font-size: $fontSize * 3;
 
             span {
                 color: rgb(85, 252, 1);
@@ -191,3 +166,55 @@ $num-1 : 20;
     font-size: ceil($num / $num-1) + px; // 無條件進位
     padding: floor($num / $num-1) + px; // 無條件捨去
 }
+
+// $marginTop: 21px;
+
+@mixin boxArea($marginTop) {
+    .box-area {
+        @if $marginTop <=20px {
+            margin-top: $marginTop;
+        }
+
+        @else {
+            margin-top: ($marginTop / 2)
+        }
+    }
+}
+
+@include boxArea(20px);
+
+
+
+
+@mixin theme($theme) {
+    @if $theme==green {
+        body {
+            background-color: green;
+            @content
+        }
+    }
+    @else if $theme==yellow {
+        body {
+            background-color: yellow;
+             @content
+        }
+    }
+    @else if $theme==blue {
+        body {
+            background-color: blue;
+            @content
+        }
+    }
+    @else {
+        body {
+            background-color: #fff;
+            @content
+        }
+    }
+};
+
+@include theme(yellow){
+  color: #fff; 
+}
+
+

@@ -1,0 +1,18 @@
+@mixin titleSize($fontSize) {
+    h1 {
+        font-size: ceil($fontSize * 4.8);
+    }
+    h2 {
+        font-size: floor($fontSize * 3.2);
+    }
+    h3 {
+        font-size: round($fontSize * 2.8);
+    }
+    h4 {
+        font-size: ceil($fontSize * 2.1);
+    }
+    h5 {
+        font-size: ceil($fontSize * 1.2);
+    }
+
+}
