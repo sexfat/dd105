@@ -15,13 +15,33 @@ body {
   margin: 0;
   background-color: #be0000;
   color: #333;
-  font-size: 14px;
+  font-size: 18px;
+}
+
+body h1 {
+  font-size: 87px;
+}
+
+body h2 {
+  font-size: 57px;
+}
+
+body h3 {
+  font-size: 50px;
+}
+
+body h4 {
+  font-size: 38px;
+}
+
+body h5 {
+  font-size: 22px;
 }
 
 body .wrapper h1 {
   padding: 0;
   margin: 0;
-  font-size: 42px;
+  font-size: 54px;
 }
 
 body .wrapper h1 span {

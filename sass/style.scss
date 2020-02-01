@@ -8,6 +8,28 @@
 @import 'mixins/float';
 
 
+@mixin titleSize($fontSize) {
+    h1 {
+        font-size: ceil($fontSize * 4.8);
+    }
+    h2 {
+        font-size: floor($fontSize * 3.2);
+    }
+    h3 {
+        font-size: round($fontSize * 2.8);
+    }
+    h4 {
+        font-size: ceil($fontSize * 2.1);
+    }
+    h5 {
+        font-size: ceil($fontSize * 1.2);
+    }
+
+}
+
+
+
+
 
 
 
@@ -26,6 +48,7 @@ body {
     background-color: $bgc;
     color: $color;
     font-size: $fontSize;
+    @include titleSize($fontSize);
 
     .wrapper {
         h1 {
@@ -162,9 +185,9 @@ $num-1 : 20;
 
 .box-plus {
     width: $num + $num-1 + px;
-    height : $num - $num-1 + px ;
-    margin:  $num * $num-1 + px ;
-    font: round($num / $num-1 ) + px; //四捨五入
-    font-size: ceil($num / $num-1 ) + px; // 無條件進位
-    padding: floor($num / $num-1 ) + px; // 無條件捨去
+    height: $num - $num-1 + px;
+    margin: $num * $num-1 + px;
+    font: round($num / $num-1) + px; //四捨五入
+    font-size: ceil($num / $num-1) + px; // 無條件進位
+    padding: floor($num / $num-1) + px; // 無條件捨去
 }
