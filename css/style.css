@@ -5,6 +5,7 @@ header {
 
 footer {
   background-color: #c800ff;
+  height: 300px;
 }
 
 /*mixin*/
@@ -79,5 +80,33 @@ body .wrapper .content .rect {
 
 .btn_medium:hover {
   background-color: #0033cc;
+}
+
+.link {
+  color: #00f210;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.link::before {
+  content: 'before ';
+}
+
+.link::after {
+  content: 'after';
+}
+
+.bgimages {
+  background-image: url("./images/pic_02.jpg");
+}
+
+.btnclass {
+  width: 110px;
+  padding: 10px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

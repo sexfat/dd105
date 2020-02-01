@@ -68,3 +68,46 @@ body {
     @include btn(150px, 8px, #fff, rgb(0, 64, 255), 0px, 10px);
     margin: 10px 0;
 }
+
+
+.link {
+    color: rgb(0, 242, 16);
+
+    &:hover {
+        color: #fff;
+    }
+
+    &::before {
+        content: 'before ';
+    }
+
+    &::after {
+        content: 'after';
+    }
+}
+
+
+
+@mixin btn_class($class, $width) {
+    .#{$class} {
+        width: $width;
+        padding: 10px;
+        text-align: center;
+        background-color: #333;
+        color: #fff
+    }
+}
+
+@mixin bg_image($url_files) {
+    background-image: url('./images/#{$url_files}.jpg');
+}
+.bgimages {
+    @include bg_image(pic_02);
+}
+
+
+
+
+
+
+@include btn_class(btnclass, 110px);
