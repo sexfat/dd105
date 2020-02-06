@@ -1,1 +1,62 @@
-header{background-color:#04f900;width:100%;height:300px}footer{background-color:#c800ff;height:300px}header{background-color:#04f900;width:1200px;height:300px}footer{background-color:#c800ff;height:300px}.primary_btn{width:120px;padding:10px;background-color:#0274ff;cursor:pointer;border-radius:5px}.primary_btn:hover{background-color:#005dce}.secondary_btn{width:120px;padding:10px;background-color:#d5d5d5;cursor:pointer;border-radius:5px}.secondary_btn:hover{background-color:#bcbcbc}.success_btn{width:120px;padding:10px;background-color:#40ff00;cursor:pointer;border-radius:5px}.success_btn:hover{background-color:#3c0}.warning_btn{width:120px;padding:10px;background-color:#feb90a;cursor:pointer;border-radius:5px}.warning_btn:hover{background-color:#d49801}.fail_btn{width:120px;padding:10px;background-color:#fe0303;cursor:pointer;border-radius:5px}.fail_btn:hover{background-color:#cd0101}
+header {
+  background-color: #04f900;
+  width: 100%;
+  height: 300px; }
+
+footer {
+  background-color: #c800ff;
+  height: 300px; }
+
+header {
+  background-color: #04f900;
+  width: 1200px;
+  height: 300px; }
+
+footer {
+  background-color: #c800ff;
+  height: 300px; }
+
+.primary_btn {
+  width: 120px;
+  padding: 10px;
+  background-color: #0274ff;
+  cursor: pointer;
+  border-radius: 5px; }
+  .primary_btn:hover {
+    background-color: #005dce; }
+
+.secondary_btn {
+  width: 120px;
+  padding: 10px;
+  background-color: #d5d5d5;
+  cursor: pointer;
+  border-radius: 5px; }
+  .secondary_btn:hover {
+    background-color: #bcbcbc; }
+
+.success_btn {
+  width: 120px;
+  padding: 10px;
+  background-color: #40ff00;
+  cursor: pointer;
+  border-radius: 5px; }
+  .success_btn:hover {
+    background-color: #33cc00; }
+
+.warning_btn {
+  width: 120px;
+  padding: 10px;
+  background-color: #feb90a;
+  cursor: pointer;
+  border-radius: 5px; }
+  .warning_btn:hover {
+    background-color: #d49801; }
+
+.fail_btn {
+  width: 120px;
+  padding: 10px;
+  background-color: #fe0303;
+  cursor: pointer;
+  border-radius: 5px; }
+  .fail_btn:hover {
+    background-color: #cd0101; }

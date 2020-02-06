@@ -329,7 +329,8 @@ h1 {
 $vars :(num1 : 10px,
     num2 : 20px,
     num3: 30px,
-    num4: 40px);
+    num4: 40px,
+    num5: 50px);
 
 @each $name,
 $num in $vars {

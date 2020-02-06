@@ -12,8 +12,8 @@ var sass = require('gulp-sass');
 gulp.task('concatjs' ,function () {
     gulp.src('js/*.js').pipe(gulp.dest('dest/js'));
 });
-
-gulp.task('concatcss' ,function () {
+//任務串連
+gulp.task('concatcss' , ['sass'] ,function () {
     gulp.src('css/*.css')
     .pipe(cleanCSS({compatibility: 'ie9'}))
     .pipe(gulp.dest('dest/css'));
@@ -25,4 +25,12 @@ gulp.task('sass' , function() {
     .pipe(sass().on('error', sass.logError))
     // .pipe(cleanCSS({compatibility: 'ie9'}))
     .pipe(gulp.dest('css/'));
+});
+
+gulp.task('watch' , function(){
+  gulp.watch(['sass/*.scss' , 'sass/**/*.scss'], ['concatcss']);
+  gulp.watch('js/*.js', ['concatjs']);
+  gulp.watch('*.html', ['concatjs']);
 })
+
+
