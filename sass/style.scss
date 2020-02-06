@@ -25,7 +25,7 @@
 
 //其他 bootstrap 套件
 
-@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+// @import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 
 
@@ -107,7 +107,6 @@ body {
     @include btn(150px, 8px, #fff, rgb(0, 64, 255), 0px, 10px);
     margin: 10px 0;
 }
-
 
 .link {
     color: rgb(0, 242, 16);
@@ -254,7 +253,7 @@ $num-1 : 20;
     color: #fff;
 }
 
-@for $i from 1 through 100 {
+@for $i from 1 through 10 {
     .for-#{$i} {
         font-size: $i * 1px;
     }
@@ -313,4 +312,37 @@ $num-1 : 20;
 @include items(20, 2);
 
 
+$a: 10px;
+//map
 
+
+$a-map:(key1 : 10px,
+    key2 : 20px,
+    key3: 30px);
+
+$b-map:(key4: 40px,
+    key5: 50px,
+);
+
+$c-map : map-merge($a-map, $b-map);
+
+
+h1 {
+    font-size: map-get($a-map, key3);
+    width: map-get($b-map, key4);
+    height: map-get($c-map, key5);
+}
+
+// map + @each 
+$vars :(num1 : 10px,
+    num2 : 20px,
+    num3: 30px,
+    num4: 40px
+    );
+
+@each $name , $num  in $vars {
+
+    .items-#{$name} {
+        width : $num;
+    }
+}

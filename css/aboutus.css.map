@@ -1,10 +1,10 @@
 {
     "version": 3,
-    "mappings": "AEAA,AAAA,MAAM,CAAE;EACL,gBAAgB,EDKL,OAAc;ECJzB,MAAM,EAAE,KAAK;CACf;;ACHD,AAAA,MAAM,CAAC;EACJ,gBAAgB,EFML,OAAgB;EEL3B,MAAM,EAAE,KAAK;CACf;;ADHD,AAAA,MAAM,CAAE;EACL,gBAAgB,EDKL,OAAc;ECJzB,MAAM,EAAE,KAAK;CACf;;ACHD,AAAA,MAAM,CAAC;EACJ,gBAAgB,EFML,OAAgB;EEL3B,MAAM,EAAE,KAAK;CACf",
+    "mappings": "AEAA,AAAA,MAAM,CAAE;EACJ,gBAAgB,EDKN,OAAc;ECJxB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;CACf;;ACJF,AAAA,MAAM,CAAC;EACJ,gBAAgB,EFML,OAAgB;EEL3B,MAAM,EAAE,KAAK;CACf;;ACHD,AAAA,MAAM,CAAE;EACL,gBAAgB,EHKL,OAAc;EGJzB,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,KAAK;CACf;;ADJD,AAAA,MAAM,CAAC;EACJ,gBAAgB,EFML,OAAgB;EEL3B,MAAM,EAAE,KAAK;CACf",
     "sources": [
         "../sass/aboutus.scss",
         "../sass/base/_var.scss",
-        "../sass/layout/_header.scss",
+        "../sass/layout/_header_full.scss",
         "../sass/layout/_footer.scss",
         "../sass/layout/_header.scss",
         "../sass/layout/_footer.scss",
