@@ -64,7 +64,6 @@ body {
 .primary_btn {
   width: 120px;
   padding: 10px;
-  text-align: center;
   background-color: #0274ff;
   cursor: pointer;
   border-radius: 5px;
@@ -77,7 +76,6 @@ body {
 .secondary_btn {
   width: 120px;
   padding: 10px;
-  text-align: center;
   background-color: #d5d5d5;
   cursor: pointer;
   border-radius: 5px;
@@ -90,7 +88,6 @@ body {
 .success_btn {
   width: 120px;
   padding: 10px;
-  text-align: center;
   background-color: #40ff00;
   cursor: pointer;
   border-radius: 5px;
@@ -103,7 +100,6 @@ body {
 .warning_btn {
   width: 120px;
   padding: 10px;
-  text-align: center;
   background-color: #feb90a;
   cursor: pointer;
   border-radius: 5px;
@@ -116,7 +112,6 @@ body {
 .fail_btn {
   width: 120px;
   padding: 10px;
-  text-align: center;
   background-color: #fe0303;
   cursor: pointer;
   border-radius: 5px;

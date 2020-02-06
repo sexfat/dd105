@@ -26,7 +26,7 @@
     .#{$btn_name}_btn{
         width: 120px;
         padding: 10px;
-        @include textAlign(center);
+        // @include textAlign(center);
         background-color: $btn_color;
         cursor: pointer;
         &:hover{
