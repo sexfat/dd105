@@ -8,6 +8,24 @@ footer {
   height: 300px;
 }
 
+@media all and (min-width: 1366px) {
+  .wraper {
+    width: 1200px;
+  }
+}
+
+@media all and (min-width: 995px) {
+  .wraper {
+    width: 996px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .wraper {
+    width: 721px;
+  }
+}
+
 /*mixin*/
 body {
   padding: 0;
@@ -660,5 +678,41 @@ body {
 
 .img_jpgbox {
   background-image: url("images/jpgbox.jpg");
+}
+
+.item-20 {
+  width: 20px;
+}
+
+.item-18 {
+  width: 18px;
+}
+
+.item-16 {
+  width: 16px;
+}
+
+.item-14 {
+  width: 14px;
+}
+
+.item-12 {
+  width: 12px;
+}
+
+.item-10 {
+  width: 10px;
+}
+
+.item-8 {
+  width: 8px;
+}
+
+.item-6 {
+  width: 6px;
+}
+
+.item-4 {
+  width: 4px;
 }
 /*# sourceMappingURL=style.css.map */

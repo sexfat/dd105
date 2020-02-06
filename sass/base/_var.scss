@@ -5,4 +5,9 @@ $fontFamily : 'Noto Sans TC',
 sans-serif;
 
 $header_bgc : rgb(4, 249, 0);
-$footer_bgc : rgb(200, 0, 255)
+$footer_bgc : rgb(200, 0, 255);
+
+// rwd 斷點
+$desktop :1366px;
+$medium : 995px;
+$small: 768px;

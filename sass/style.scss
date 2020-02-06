@@ -7,6 +7,13 @@
 @import 'mixins/rect';
 @import 'mixins/float';
 @import 'mixins/titleSize';
+@import 'mixins/rwd';
+@import 'page/desktop';
+@import 'page/medium';
+@import 'page/small';
+
+
+
 
 
 
@@ -240,7 +247,7 @@ $num-1 : 20;
 @include grid(12);
 
 
-@mixin img_bg($file , $list) {
+@mixin img_bg($file, $list) {
     @if $file==jpg {
         @each $var in $list {
             .img_#{$var} {
@@ -248,6 +255,7 @@ $num-1 : 20;
             }
         }
     }
+
     @else if $file==png {
         @each $var in $list {
             .img_#{$var} {
@@ -258,5 +266,26 @@ $num-1 : 20;
 }
 
 
-@include img_bg(png , a1 a2 a3 a4 box);
-@include img_bg(jpg , b1 b2 b3 b4 jpgbox);
+
+
+@include img_bg(png, a1 a2 a3 a4 box);
+@include img_bg(jpg, b1 b2 b3 b4 jpgbox);
+
+
+// @while 迴圈
+
+
+@mixin items($a, $b) {
+    @while $a>$b {
+        .item-#{$a} {
+            width: 1px * $a
+        }
+
+        $a : $a - 2;
+    }
+}
+
+@include items(20, 2);
+
+
+
