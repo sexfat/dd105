@@ -1,6 +1,7 @@
+//宣告變數
 @import 'base/var';
-@import 'layout/header';
-@import 'layout/footer';
+
+//宣告函式
 @import 'mixins/textAlign';
 @import 'mixins/btn';
 @import 'mixins/animation';
@@ -8,9 +9,33 @@
 @import 'mixins/float';
 @import 'mixins/titleSize';
 @import 'mixins/rwd';
+
+//組件 
+// @import 'btn';
+
+
+//layout
 @import 'page/desktop';
 @import 'page/medium';
 @import 'page/small';
+
+//layout modules
+@import 'layout/header';
+@import 'layout/footer';
+
+//其他 bootstrap 套件
+
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+
+
+
+
+
+
+
+
 
 
 
