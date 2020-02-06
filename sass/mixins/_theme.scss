@@ -1,0 +1,7 @@
+@mixin theme_template($theme_color){
+    @each $theme_name , $color in $theme_color{
+         .#{$theme_name}_wrapper {
+             background-color: $color;
+         }  
+    } 
+}

@@ -1,0 +1,36 @@
+@import 'base/var';
+@import 'base/reset';
+@import 'base/color';
+@import 'base/font';
+
+
+
+
+//宣告函式
+@import 'mixins/mixin';
+
+
+//layout modules
+
+@import 'layout/header';
+@import 'layout/footer';
+
+//rwd
+@import 'page/desktop';
+@import 'page/medium';
+@import 'page/small';
+
+
+//main  start
+
+@include theme_template($theme_color);
+
+
+
+
+
+
+
+
+
+

@@ -21,3 +21,20 @@
 
 // .btn_wide:hover{
 // }
+
+@each $btn_name , $btn_color in $btn-color_style {
+    .#{$btn_name}_btn{
+        width: 120px;
+        padding: 10px;
+        @include textAlign(center);
+        background-color: $btn_color;
+        cursor: pointer;
+        &:hover{
+            background-color: darken($btn_color ,10);
+         }
+         border-radius: 5px;
+
+    }
+}
+
+

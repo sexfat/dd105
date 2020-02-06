@@ -2,13 +2,7 @@
 @import 'base/var';
 
 //宣告函式
-@import 'mixins/textAlign';
-@import 'mixins/btn';
-@import 'mixins/animation';
-@import 'mixins/rect';
-@import 'mixins/float';
-@import 'mixins/titleSize';
-@import 'mixins/rwd';
+@import 'mixins/mixin';
 
 //組件 
 // @import 'btn';
@@ -19,9 +13,7 @@
 @import 'page/medium';
 @import 'page/small';
 
-//layout modules
-@import 'layout/header';
-@import 'layout/footer';
+
 
 //其他 bootstrap 套件
 
