@@ -14,5 +14,17 @@
     h5 {
         font-size: ceil($fontSize * 1.2);
     }
-
 }
+
+
+@mixin titles_module($titleSize) {
+    @each $title , $value in $titleSize {
+        #{$title} {
+         font-size: $value;
+        };
+    }
+}
+
+
+
+

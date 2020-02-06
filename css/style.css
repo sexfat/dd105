@@ -378,4 +378,24 @@ h1 {
 .items-num4 {
   width: 40px;
 }
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
 /*# sourceMappingURL=style.css.map */
