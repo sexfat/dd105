@@ -6,12 +6,6 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
 
-
-// $('aa').on('click' ,function(){
-// console.log('enter');
-
-// })
-
 gulp.task('concatjs' ,function () {
     gulp.src('js/*.js').pipe(gulp.dest('dest/js'));
 });
@@ -50,7 +44,7 @@ gulp.task('watch' , function(){
   gulp.watch(['*.html' , '**/*.html'],  ['fileinclude']);
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('default', function() {
     browserSync.init({
         server: {
             baseDir: "./dest",
@@ -59,6 +53,7 @@ gulp.task('browser-sync', function() {
     });
     gulp.watch(['*.html' , '**/*.html'],  ['fileinclude']).on('change',reload);
     gulp.watch(['sass/*.scss' , 'sass/**/*.scss'], ['sass']).on('change',reload);
+    gulp.watch(['img/*.*' , 'img/**/*.*']).on('change',reload);
 });
 
 
