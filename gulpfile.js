@@ -6,46 +6,73 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
 
-gulp.task('concatjs' ,function () {
+
+//path 路徑
+var web = {
+    html: [
+        'dev/*.html',
+        'dev/**/*.html'
+    ],
+    sass: [
+        'dev/sass/*.scss',
+        'dev/sass/**/*.scss',
+    ],
+    js: [
+        'dev/js/*.js'
+    ],
+    img: [
+        'dev/img/*.*',
+        'dev/img/**/*.*',
+    ],
+    font: [
+        'dev/font/*.*', 
+         'dev/font/**/*.*'
+    ]
+}
+
+//流程
+gulp.task('concatjs', function () {
     gulp.src('dev/js/*.js').pipe(gulp.dest('dest/js'));
 });
 
-gulp.task('img' ,function () {
-    gulp.src(['dev/img/*.*'  , 'dev/img/**/*.*']).pipe(gulp.dest('dest/img'));
+gulp.task('img', function () {
+    gulp.src(web.img).pipe(gulp.dest('dest/img'));
 });
 
-gulp.task('font' ,function () {
-    gulp.src(['dev/font/*.*'  , 'dev/font/**/*.*']).pipe(gulp.dest('dest/font'));
+gulp.task('font', function () {
+    gulp.src(web.font).pipe(gulp.dest('dest/font'));
 });
 
 
 //任務串連
-gulp.task('concatcss' , ['sass'] ,function () {
+gulp.task('concatcss', ['sass'], function () {
     gulp.src('css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie9'}))
-    .pipe(gulp.dest('dest/css'));
+        .pipe(cleanCSS({
+            compatibility: 'ie9'
+        }))
+        .pipe(gulp.dest('dest/css'));
 });
 
 
-gulp.task('sass' , function() {
+gulp.task('sass', function () {
     gulp.src('dev/sass/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    // .pipe(cleanCSS({compatibility: 'ie9'}))
-    .pipe(gulp.dest('dest/css/'));
+        .pipe(sass().on('error', sass.logError))
+        // .pipe(cleanCSS({compatibility: 'ie9'}))
+        .pipe(gulp.dest('dest/css/'));
 });
 
 
 //打包html
 
 
-gulp.task('fileinclude', function() {
+gulp.task('fileinclude', function () {
     gulp.src(['dev/*.html'])
-      .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
-      }))
-      .pipe(gulp.dest('./dest'));
-  });
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('./dest'));
+});
 
 
 // gulp.task('watch' , function(){
@@ -54,22 +81,16 @@ gulp.task('fileinclude', function() {
 //   gulp.watch(['*.html' , '**/*.html'],  ['fileinclude']);
 // });
 
-gulp.task('default', function() {
+gulp.task('default', function () {
     browserSync.init({
         server: {
             baseDir: "./dest",
             index: "main.html"
         }
     });
-    gulp.watch(['dev/*.html' , 'dev/**/*.html'],  ['fileinclude']).on('change',reload);
-    gulp.watch(['dev/sass/*.scss' , 'dev/sass/**/*.scss'], ['sass']).on('change',reload);
-    gulp.watch(['dev/js/*.js' , 'dev/js/**/*.js'], ['concatjs']).on('change',reload);
-    gulp.watch(['dev/img/*.*' , 'dev/img/**/*.*'] ,['img'] ).on('change',reload);
-    gulp.watch(['font/*.*' , 'font/**/*.*'] ,['font'] ).on('change',reload);
+    gulp.watch(web.html, ['fileinclude']).on('change', reload);
+    gulp.watch(web.sass, ['sass']).on('change', reload);
+    gulp.watch(web.js, ['concatjs']).on('change', reload);
+    gulp.watch(web.img, ['img']).on('change', reload);
+    gulp.watch(web.font, ['font']).on('change', reload);
 });
-
-
-
-
-
-
