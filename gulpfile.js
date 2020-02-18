@@ -82,7 +82,6 @@ gulp.task('mini_img', function () {
       .pipe(gulp.dest('dest/mini_img/'))
   });
 
-
 // gulp.task('watch' , function(){
 //   gulp.watch(['sass/*.scss' , 'sass/**/*.scss'], ['concatcss']);
 //   gulp.watch('js/*.js', ['concatjs']);
