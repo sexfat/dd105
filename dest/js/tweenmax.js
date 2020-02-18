@@ -43,8 +43,7 @@ function animation() {
 
 var tl = new TimelineMax({
     repeat: 1,
-    yoyo: true,
-    onComplete: rotation3d
+    yoyo: true
 });
 
 tl.to('.box4', 1, {
@@ -56,16 +55,25 @@ tl.to('.box4', 1, {
 });
 
 
+TweenMax.to('.circle' , 1 , {
+     rotation : 360,
+     repeat: -1,
+     ease : Power0.easeNone,
+})
 
 
 
-function rotation3d() {
-    TweenMax.to('.box-wide', 1, {
+
+
+
+    TweenMax.to('.box-wide', 1.4, {
         rotationY: 360,
+        repeat: -1,
+        // ease : Power0.easeNone,
         transformOrigin: 'center 100% -200', //定位點
         transformPerspective: 600,
     });
-}
+
 
 function goalert() {
     alert();
