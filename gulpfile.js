@@ -28,11 +28,8 @@ gulp.task('sass' , function() {
     .pipe(gulp.dest('css/'));
 });
 
-gulp.task('watch' , function(){
-  gulp.watch(['sass/*.scss' , 'sass/**/*.scss'], ['concatcss']);
-  gulp.watch('js/*.js', ['concatjs']);
-  gulp.watch('*.html', ['concatjs']);
-});
+
+//打包html
 
 
 gulp.task('fileinclude', function() {
@@ -43,4 +40,14 @@ gulp.task('fileinclude', function() {
       }))
       .pipe(gulp.dest('./dest'));
   });
+
+
+gulp.task('watch' , function(){
+  gulp.watch(['sass/*.scss' , 'sass/**/*.scss'], ['concatcss']);
+  gulp.watch('js/*.js', ['concatjs']);
+  gulp.watch(['*.html' , '**/*.html'],  ['fileinclude']);
+});
+
+
+
 
