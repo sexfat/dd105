@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
+var fileinclude = require('gulp-file-include');
 
 
 
@@ -31,6 +32,15 @@ gulp.task('watch' , function(){
   gulp.watch(['sass/*.scss' , 'sass/**/*.scss'], ['concatcss']);
   gulp.watch('js/*.js', ['concatjs']);
   gulp.watch('*.html', ['concatjs']);
-})
+});
 
+
+gulp.task('fileinclude', function() {
+    gulp.src(['product.html'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./dest'));
+  });
 
