@@ -1,0 +1,83 @@
+<!--註釋文字 -->
+<!-- 第1行為代碼註釋標籤，代碼註釋的作用是幫助程序員標註代碼的用途，不會直接呈現在網頁上，我們會通過這樣的方式讓大家來了解一個網頁 -->
+<!--<!DOCTYPE> 不是html標籤，但它會告訴瀏覽器html的版本，下面這個寫法就是html5啦 -->
+<!DOCTYPE html>
+<html>
+<!-- 文檔的頭部描述了文檔的各種屬性和信息，包括文檔的標題等、Meta以及css等外部鏈接的引入-->
+
+<head lang="en">
+    <!-- meta標籤定義了網頁的一些信息，比如charset是編碼格式，http-equiv向瀏覽器傳回一些有用的信息，以幫助正確和精確地顯示網頁內容，viewport，則定義頁面的寬度與打開頁面的屏幕寬度的關係等,keywords和description則是SEO的關鍵，大家可以去研究一下大網站的頭部信息 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- css寫法 -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h2 {
+            color: blue
+        }
+    </style>
+    <!-- js 寫法 -->
+    <noscript>環境沒辦法執行js </noscript>
+    <script src="js/scripts.js"></script>
+    <script>
+        console.log("html inner")
+    </script>
+    <title>首頁</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 id="logo"><img src="img/colorful-and-eye-shaped-lens.png" alt="">
+                <div>公司名稱</div>
+            </h1>
+            <div class="search"></div>
+            <nav>
+                <ul>
+                    <a href="#"><li>關於我們</li></a>
+                    <li><a href="#">產品/服務</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </nav>
+            <div class="login">會員登入</div>
+        </header>
+        <div class="content">
+            <div class="banner"></div>
+            <div class="inner-content">
+                <h2> <a href="https://www.oneday.com.tw/no-090/" target="_blank">我會為了這家館子特意經過那座城</a></h2>
+                <p>我們的<b>好朋友</b>、也是 <span
+                        class="subtext">《小日子》</span>專欄作家<em>馬世芳</em>在本期<small>專欄</small>中下了這樣一個標：<br>「我會為了這家館子，<div>
+                        特意經過那座城。」</div>一語道盡 <div class="subtext">《小日子》</div>
+                    本期的精髓。我們在城市中有很多落腳處，有時候只是提供一碗熱湯的店，有時候是市場裡亮著燈的糖果鋪，這些店收留我們流浪的靈魂，照顧了我們身心。</p>
+            </div>
+            <div class="prdouct">
+                <pre>
+                    特別企劃小日子商号
+                    文　林筑婷
+                    攝　簡子鑫
+                    口述　小日子商号Café 店員 
+                    Cooper 
+
+                 </pre>
+                <a href="aboutus.html ">aboutus</a>
+
+            </div>
+        </div>
+        <footer>
+            <div class="sub-logo"></div>
+            <nav>
+                <ul>
+                    <li>關於我們</li>
+                    <li>產品/服務</li>
+                    <li>聯絡我們</li>
+                </ul>
+                <div class="contactus">
+                    聯絡我們
+                    email
+                </div>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -36,7 +36,7 @@ gulp.task('watch' , function(){
 
 
 gulp.task('fileinclude', function() {
-    gulp.src(['product.html'])
+    gulp.src(['*.html'])
       .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file'
