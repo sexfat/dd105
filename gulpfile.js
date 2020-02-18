@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 var fileinclude = require('gulp-file-include');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
 
 
 
@@ -47,6 +49,19 @@ gulp.task('watch' , function(){
   gulp.watch('js/*.js', ['concatjs']);
   gulp.watch(['*.html' , '**/*.html'],  ['fileinclude']);
 });
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./dest",
+            index: "main.html"
+        }
+    });
+    gulp.watch(['*.html' , '**/*.html'],  ['fileinclude']).on('change',reload);
+    gulp.watch(['sass/*.scss' , 'sass/**/*.scss'], ['sass']).on('change',reload);
+});
+
+
 
 
 
