@@ -3,6 +3,8 @@ var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 var fileinclude = require('gulp-file-include');
 var imagemin = require('gulp-imagemin');
+var jshint = require('gulp-jshint');
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
@@ -47,7 +49,7 @@ gulp.task('font', function () {
 
 //任務串連
 gulp.task('concatcss', ['sass'], function () {
-    gulp.src('css/*.css')
+    return gulp.src('css/*.css')
         .pipe(cleanCSS({
             compatibility: 'ie9'
         }))
@@ -55,10 +57,19 @@ gulp.task('concatcss', ['sass'], function () {
 });
 
 
+gulp.task('lint', function() {
+    return gulp.src('./dev/js/*.js')
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'));
+  });
+
+
 gulp.task('sass', function () {
-    gulp.src('dev/sass/*.scss')
+    return gulp.src('dev/sass/*.scss')
+       .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         // .pipe(cleanCSS({compatibility: 'ie9'}))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('dest/css/'));
 });
 
@@ -77,7 +88,7 @@ gulp.task('fileinclude', function () {
 
 //壓縮圖片
 gulp.task('mini_img', function () {
-    gulp.src('dev/img/*.*')
+    return  gulp.src('dev/img/*.*')
       .pipe(imagemin())
       .pipe(gulp.dest('dest/mini_img/'))
   });
@@ -98,6 +109,7 @@ gulp.task('default', function () {
     gulp.watch(web.html, ['fileinclude']).on('change', reload);
     gulp.watch(web.sass, ['sass']).on('change', reload);
     gulp.watch(web.js, ['concatjs']).on('change', reload);
+    gulp.watch(web.js, ['lint']).on('change', reload);
     gulp.watch(web.img, ['img']).on('change', reload);
     gulp.watch(web.font, ['font']).on('change', reload);
 });
