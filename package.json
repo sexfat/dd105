@@ -12,7 +12,8 @@
     "bootstrap-sass": "^3.4.1",
     "gsap": "^3.1.1",
     "gulp": "^3.9.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "scrollmagic": "^2.0.7"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

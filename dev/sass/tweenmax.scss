@@ -6,12 +6,13 @@ body {
 section {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(37, 179, 255);
+    border-bottom: 2px solid #fff;
 }
 
 .box {
-    width: 60px;
-    height: 60px;
+    width: 160px;
+    height: 40px;
     color:#fff;
     background-color: rgb(98, 255, 0);
     margin-top: 5px;

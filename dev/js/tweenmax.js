@@ -1,4 +1,7 @@
 console.log('ok');
+var controller = new ScrollMagic.Controller();
+
+
 
 TweenMax.to('.box1', 2, {
     // x: 800,
@@ -6,7 +9,7 @@ TweenMax.to('.box1', 2, {
     // perspective:500,
     ease: Quad.easeOut,
     // autoAlpha: 0,
-    // opacity: 0
+    // opacity: 0
     // rotation : 360,
     // transformOrigin : 'right bottom' ,//定位點
 
@@ -55,10 +58,10 @@ tl.to('.box4', 1, {
 });
 
 
-TweenMax.to('.circle' , 1 , {
-     rotation : 360,
-     repeat: -1,
-     ease : Power0.easeNone,
+TweenMax.to('.circle', 1, {
+    rotation: 360,
+    repeat: -1,
+    ease: Power0.easeNone,
 })
 
 
@@ -66,15 +69,56 @@ TweenMax.to('.circle' , 1 , {
 
 
 
-    TweenMax.to('.box-wide', 1.4, {
-        rotationY: 360,
-        repeat: -1,
-        // ease : Power0.easeNone,
-        transformOrigin: 'center 100% -200', //定位點
-        transformPerspective: 600,
-    });
+TweenMax.to('.box-wide', 1.4, {
+    rotationY: 360,
+    repeat: -1,
+    // ease : Power0.easeNone,
+    transformOrigin: 'center 100% -200', //定位點
+    transformPerspective: 600,
+});
 
 
-function goalert() {
-    alert();
-}
+// function goalert() {
+//     alert();
+// }
+
+
+TweenMax.to('.bezier', 2, {
+    bezier: {
+        values: [{
+                x: 0,
+                y: 0
+            },
+            {
+                x: 600,
+                y: 600
+            },
+            {
+                x: 300,
+                y: 400
+            }, {
+                x: 200,
+                y: 100
+            }
+
+        ],
+        autoRotate: false
+    },
+    ease: Elastic.easeOut
+
+});
+
+
+//scrollmagic
+
+var scroll01 = TweenMax.to('.scroll01', 1, {
+    x: 200,
+    y: 200
+});
+
+
+new ScrollMagic.Scene({
+    triggerElement: '#trigger01',
+}).setTween(scroll01)
+.addIndicators()
+.addTo(controller);
